@@ -43,3 +43,15 @@ if user_menu == 'Overall Analysis':
     events = df['Event'].unique().shape[0]
     athletes = df['Name'].unique().shape[0]
     nations = df['region'].unique().shape[0]
+
+    st.title("Top Statistics")
+    col1,col2,col3 = st.columns(3)
+    with col1:
+        st.header("Editions")
+        st.title(editions)
+    with col2:
+        st.header("Hosts")
+        st.title(cities)
+    with col3:
+        st.header("Sports")
+        st.title(sports)
