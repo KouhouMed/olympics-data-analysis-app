@@ -88,3 +88,8 @@ if user_menu == 'Overall Analysis':
     ax = sns.heatmap(x.pivot_table(index='Sport', columns='Year', values='Event', aggfunc='count').fillna(0).astype('int'),
                 annot=True)
     st.pyplot(fig)
+
+    st.title("Most successful Athletes")
+    sport_list = df['Sport'].unique().tolist()
+    sport_list.sort()
+    sport_list.insert(0,'Overall')
