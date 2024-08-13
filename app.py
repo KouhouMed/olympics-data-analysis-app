@@ -93,3 +93,7 @@ if user_menu == 'Overall Analysis':
     sport_list = df['Sport'].unique().tolist()
     sport_list.sort()
     sport_list.insert(0,'Overall')
+
+    selected_sport = st.selectbox('Select a Sport',sport_list)
+    x = helper.most_successful(df,selected_sport)
+    st.table(x)
