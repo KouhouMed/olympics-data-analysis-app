@@ -108,4 +108,6 @@ if user_menu == 'Country-wise Analysis':
     selected_country = st.sidebar.selectbox('Select a Country',country_list)
 
     country_df = helper.yearwise_medal_tally(df,selected_country)
-    
+    fig = px.line(country_df, x="Year", y="Medal")
+    st.title(selected_country + " Medal Tally over the years")
+    st.plotly_chart(fig)
