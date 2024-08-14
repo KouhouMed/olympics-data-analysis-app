@@ -101,3 +101,5 @@ if user_menu == 'Overall Analysis':
 if user_menu == 'Country-wise Analysis':
 
     st.sidebar.title('Country-wise Analysis')
+    country_list = df['region'].dropna().unique().tolist()
+    country_list.sort()
