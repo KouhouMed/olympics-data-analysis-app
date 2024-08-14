@@ -111,3 +111,5 @@ if user_menu == 'Country-wise Analysis':
     fig = px.line(country_df, x="Year", y="Medal")
     st.title(selected_country + " Medal Tally over the years")
     st.plotly_chart(fig)
+
+    st.title(selected_country + " excels in the following sports")
