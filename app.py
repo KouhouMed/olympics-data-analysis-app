@@ -122,3 +122,5 @@ if user_menu == 'Country-wise Analysis':
     top10_df = helper.most_successful_countrywise(df,selected_country)
     st.table(top10_df)
     
+if user_menu == 'Athlete wise Analysis':
+    athlete_df = df.drop_duplicates(subset=['Name', 'region'])
