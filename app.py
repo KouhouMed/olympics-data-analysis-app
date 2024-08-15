@@ -146,3 +146,8 @@ if user_menu == 'Athlete wise Analysis':
                      'Volleyball', 'Synchronized Swimming', 'Table Tennis', 'Baseball',
                      'Rhythmic Gymnastics', 'Rugby Sevens',
                      'Beach Volleyball', 'Triathlon', 'Rugby', 'Polo', 'Ice Hockey']
+    
+    for sport in famous_sports:
+        temp_df = athlete_df[athlete_df['Sport'] == sport]
+        x.append(temp_df[temp_df['Medal'] == 'Gold']['Age'].dropna())
+        name.append(sport)
